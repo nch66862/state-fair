@@ -6,6 +6,10 @@ eventHub.addEventListener("click", clickEvent => {
         const rideEvent = new CustomEvent("rideTicketPurchased")
         eventHub.dispatchEvent(rideEvent)
     }
+    else if (clickEvent.target.id === "foodTicket") {
+        const rideEvent = new CustomEvent("foodTicketPurchased")
+        eventHub.dispatchEvent(rideEvent)
+    }
 })
 
 export const TicketBooth = () => {
